@@ -1,4 +1,4 @@
-import { sum } from "./sum";
+import { isValidInput, sum } from "./sum";
 
 describe("sum function", () => {
   it("adds 1 + 2 to equal 3", () => {
@@ -21,4 +21,10 @@ test("testing falsy values", () => {
 test("testing truthy values", () => {
   const n = 1;
   expect(n).toBeTruthy();
+});
+
+test("throws an error when invalid input is provided", () => {
+  expect(() => isValidInput("a")).toThrow(
+    "Invalid input: Input must be a number"
+  );
 });
