@@ -1,4 +1,4 @@
-import { isValidInput, sum } from "./sum";
+import { fetchData, isValidInput, sum } from "./sum";
 
 describe("sum function", () => {
   it("adds 1 + 2 to equal 3", () => {
@@ -27,4 +27,17 @@ test("throws an error when invalid input is provided", () => {
   expect(() => isValidInput("a")).toThrow(
     "Invalid input: Input must be a number"
   );
+});
+
+test("will fetch data peanut butter", (done) => {
+  function callback(data) {
+    try {
+      expect(data).toBe("peanut butter");
+      done();
+    } catch (error) {
+      done(error);
+    }
+  }
+
+  fetchData(callback);
 });

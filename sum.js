@@ -7,3 +7,9 @@ export function isValidInput(a) {
     throw new Error("Invalid input: Input must be a number");
   }
 }
+
+export function fetchData(callback) {
+  setTimeout(() => {
+    callback("peanut butter");
+  }, 1000);
+}
