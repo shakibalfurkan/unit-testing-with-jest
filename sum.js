@@ -13,3 +13,11 @@ export function fetchData(callback) {
     callback("peanut butter");
   }, 1000);
 }
+
+export function fetchPromise() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("peanut butter");
+    }, 1000);
+  });
+}
