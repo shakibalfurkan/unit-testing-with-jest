@@ -75,3 +75,18 @@ test("spying on a method of an object", () => {
   expect(spy).toHaveBeenCalled();
   spy.mockRestore();
 });
+
+test("check isArray", () => {
+  const arr = [1, 2, 3];
+  expect(Array.isArray(arr)).toBe(true);
+});
+
+test("check string contains substring", () => {
+  const str = "Hello, world!";
+  expect(str).toContain("world");
+});
+
+test("check array length", () => {
+  const arr = [1, 2, 3, 4, 5];
+  expect(arr).toHaveLength(5);
+});
