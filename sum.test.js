@@ -90,3 +90,18 @@ test("check array length", () => {
   const arr = [1, 2, 3, 4, 5];
   expect(arr).toHaveLength(5);
 });
+
+test("check number greater than", () => {
+  const num = 10;
+  expect(num).toBeGreaterThan(5);
+});
+
+test("check object has property", () => {
+  const obj = { name: "Alice", age: 30 };
+  expect(obj).toHaveProperty("name");
+});
+
+test("check string matches regex", () => {
+  const str = "abc123";
+  expect(str).toMatch(/[a-z]+\d+/);
+});
